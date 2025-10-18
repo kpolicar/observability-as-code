@@ -16,7 +16,7 @@ alerting:
 
 rule_files:
   - 'rules/1.basic.yml'
+  - 'rules/5.node.yml'
   #- 'rules/2.absent.yml'
   #- 'rules/3.group.yml'
   #- 'rules/4.templating.yml'
-  # restart prometheus

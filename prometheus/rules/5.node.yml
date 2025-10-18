@@ -1,0 +1,8 @@
+groups:
+  - name: node.rules
+    interval: 5s
+    rules:
+      - record: cpu_usage
+        expr: avg without (mode, cpu) (
+          1 - rate(node_cpu_seconds_total{mode="idle"}[10s])
+          )
