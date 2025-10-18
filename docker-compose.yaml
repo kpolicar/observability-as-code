@@ -48,6 +48,17 @@ services:
       - ./alertmanager:/etc/alertmanager/
     ports:
       - 9093:9093
+  node_exporter:
+    image: quay.io/prometheus/node-exporter:latest
+    container_name: node_exporter
+    command:
+      - '--path.rootfs=/host'
+    pid: host
+    restart: unless-stopped
+    volumes:
+      - '/:/host:ro,rslave'
+    ports:
+      - 9100:9100
   grafana:
     image: grafana/grafana:${GRAFANA_VERSION:-12.2.0}
     #image: grafana/grafana-oss:main
