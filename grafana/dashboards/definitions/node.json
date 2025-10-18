@@ -1,0 +1,52 @@
+{
+  "uid" : "node-exporter-dashboard",
+  "title" : "Node Exporter Dashboard",
+  "tags" : [ "node-exporter", "monitoring", "generated" ],
+  "timezone" : "browser",
+  "editable" : true,
+  "graphTooltip" : 0,
+  "time" : {
+    "from" : "now-1h",
+    "to" : "now"
+  },
+  "fiscalYearStartMonth" : 0,
+  "refresh" : "5s",
+  "schemaVersion" : 36,
+  "panels" : [ {
+    "type" : "row",
+    "collapsed" : false,
+    "title" : "System Overview",
+    "gridPos" : {
+      "h" : 1,
+      "w" : 24,
+      "x" : 0,
+      "y" : 0
+    },
+    "id" : null,
+    "panels" : null
+  }, {
+    "type" : "timeseries",
+    "targets" : [ {
+      "expr" : "cpu_usage * 100",
+      "legendFormat" : "CPU Usage",
+      "refId" : "A"
+    } ],
+    "title" : "CPU Usage",
+    "transparent" : false,
+    "gridPos" : {
+      "h" : 9,
+      "w" : 12,
+      "x" : 0,
+      "y" : 1
+    },
+    "transformations" : null,
+    "fieldConfig" : {
+      "defaults" : {
+        "unit" : "percent",
+        "min" : 0.0,
+        "max" : 100.0
+      },
+      "overrides" : null
+    }
+  } ]
+}
