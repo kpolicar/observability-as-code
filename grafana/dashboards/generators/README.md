@@ -8,7 +8,7 @@ This Java project demonstrates how to generate Grafana dashboards programmatical
 - Generates a complete Node Exporter dashboard with CPU panel
 - Uses proper SDK builders for type-safe dashboard creation
 - Creates properly formatted Grafana dashboard JSON using `.toJSON()` method
-- Includes panel positioning, queries, and styling using SDK builders
+- Includes panel positioning and queries using SDK builders
 
 ## Project Structure
 
@@ -36,7 +36,6 @@ grafana/dashboards/generators/
 2. Compile and run:
    ```bash
     mvn compile exec:java
-    mvn compile exec:java -q -Dexec.args="-o=here.json"
    ```
 
 3. Run and save to file for Grafana to automatically pick up:
